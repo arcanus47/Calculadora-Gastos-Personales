@@ -1,0 +1,81 @@
+Una calculadora de gastos personales es una herramienta que te permite registrar, categorizar y analizar tus gastos e ingresos, ayudándote a gestionar tus finanzas personales de manera eficiente.
+
+--------------------
+| Ingreso de Datos |
+--------------------
+-Gastos: Puedes ingresar cada uno de tus gastos, como compras de alimentos, transporte, entretenimiento, etc. Es común que se ingresen con la fecha, el monto y la categoría del gasto.
+-Ingresos: También puedes registrar tus ingresos, como el salario, bonificaciones, o cualquier otra fuente de dinero.
+
+--------------
+| Categorías |
+--------------
+Los gastos se dividen en diferentes categorías para ayudarte a entender en qué áreas estás gastando más dinero. Por ejemplo: alimentos, transporte, vivienda, entretenimiento, ahorros, etc.
+
+----------------------
+| Análisis y Resumen |
+----------------------
+La calculadora genera resúmenes periódicos (diarios, semanales, mensuales) que te muestran cuánto has gastado en cada categoría.
+Algunos sistemas también permiten crear gráficos o tablas para visualizar mejor los datos.
+
+---------------
+| Presupuesto |
+---------------
+Puedes establecer presupuestos para diferentes categorías. La calculadora te notificará si te acercas o superas el límite que has establecido.
+Esto te ayuda a controlar el gasto y evitar gastar más de lo planeado.
+
+-----------
+| Balance |
+-----------
+Calcula el balance entre tus ingresos y gastos para mostrar si estás ahorrando o si estás gastando más de lo que ingresas.
+Un balance positivo indica que estás ahorrando, mientras que un balance negativo significa que estás gastando más de lo que ganas.
+
+---------------------------
+| Alertas y Recordatorios |
+---------------------------
+Algunas calculadoras de gastos personales pueden enviar alertas o recordatorios para registrar gastos, pagar facturas, o cuando estás cerca de alcanzar el límite de presupuesto en una categoría específica.
+_________________________________________________________________________________________________________________________________________________________________
+---------------------
+| MENU DEL PROGRAMA |
+---------------------
+=== Calculadora de Gastos Personales ===
+1. Agregar Ingresos
+-Ingresa la cantidad del ingreso:
+-Ingresa la categoría del ingreso:
+-Ingresa la fecha (DD/MM/AAAA):
+
+2. Agregar Gastos
+-Ingresa la cantidad del gasto:
+-Ingresa la categoría del gasto:
+-Ingresa la fecha (DD/MM/AAAA):
+
+3. Ver Resumen
+-Muestra el resumen de los gastos
+-Muestra el resumen de los ingresos
+-Muestra el balance del total de ingresos - total de gastos
+
+4. Salir
+_________________________________________________________________________________________________________________________________________________________________
+------------------
+| Menú Principal |
+------------------
+La función mostrar_menu() imprime el menú principal y solicita una opción al usuario.
+
+------------------
+| Agregar Gastos |
+------------------
+La función agregar_gastos() solicita al usuario ingresar la cantidad, la categoría, y la fecha del gasto. Estos datos se guardan en un archivo gastos.txt.
+
+--------------------
+| Agregar Ingresos |
+--------------------
+Similar a agregar un gasto, la función agregar_ingreso() guarda los ingresos en un archivo ingresos.txt.
+
+---------------
+| Ver Resumen |
+---------------
+La función ver_resumen() lee los archivos gastos.txt e ingresos.txt, calcula el total de gastos e ingresos, y muestra el balance.
+
+--------------------
+| Manejo del Flujo |
+--------------------
+La función main() mantiene el ciclo del menú principal activo hasta que el usuario elige salir.
