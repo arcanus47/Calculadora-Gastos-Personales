@@ -46,6 +46,18 @@ def agregar_gasto():
     pass
 
 def ver_resumen():
+    if os.path.exists("Ingresos.txt"):
+     with open ("ingresos.txt", "a") as file:
+        for Linea in file:
+            cantidad, _, _ = Linea.strip().split(",")
+            total_ingresos += float(cantidad)
+    
+    balance = total_ingresos - total_gastos    
+    
+    print ("--- Resumen del balance --- ")
+    print ("Total de ingresos: ${total_ingresos}")
+    print ("Total de los gastos: ${total_gastos}")
+    print ("Balance total: ${balance}")
     pass
 
 def main():
