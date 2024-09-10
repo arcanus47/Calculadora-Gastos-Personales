@@ -11,7 +11,7 @@ def agregar_gasto():
     categoria = input("Ingresa la categoria del gasto por ejemplo, alimentos, transporte, entretenimiento: ")
     
     try:
-        # Convoerte la fecha a un objeto datetime
+        # Convierte la fecha a un objeto datetime
         fecha = datetime.datetime.strptime(fecha_str, "%Y-%m-%d")
     except ValueError:
         print("Fecha invalida. Usa el formato DD-MM-AAAA.")
