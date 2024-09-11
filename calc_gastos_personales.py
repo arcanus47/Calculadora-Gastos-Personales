@@ -71,9 +71,9 @@ def ver_resumen():
     balance = total_ingresos - total_gastos    
     
     print ("--- Resumen del balance --- ")
-    print ("Total de ingresos: ${total_ingresos}")
-    print ("Total de los gastos: ${total_gastos}")
-    print ("Balance total: ${balance}")
+    print (f"Total de ingresos: ${total_ingresos}")
+    print (f"Total de los gastos: ${total_gastos}")
+    print (f"Balance total: ${balance}")
     pass
 
 def main():
