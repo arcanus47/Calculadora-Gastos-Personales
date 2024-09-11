@@ -43,7 +43,14 @@ def agregar_ingreso():
     root.mainloop()
 
 def agregar_gasto():
-    pass
+    cantidad = float(input("Ingresa la cantidad del gasto: "))
+    categoria = input("Ingresa la categoría del gasto: ")
+    fecha = input("Ingresa la fecha (DD/MM/AAAA): ")
+
+    with open("gastos.txt", "a") as file:
+        file.write(f"{cantidad},{categoria},{fecha}\n")
+
+    print("Gasto agregado exitosamente.")
 
 def ver_resumen(): 
     total_gastos = 0
