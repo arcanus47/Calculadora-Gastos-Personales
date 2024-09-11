@@ -1,5 +1,5 @@
 import os
-import datetime
+import datetime 
 from tkinter import *
 from tkcalendar import Calendar
 
@@ -45,13 +45,22 @@ def agregar_ingreso():
 def agregar_gasto():
     pass
 
-def ver_resumen():
-    if os.path.exists("Ingresos.txt"):
-     with open ("ingresos.txt", "a") as file:
-        for Linea in file:
-            cantidad, _, _ = Linea.strip().split(",")
-            total_ingresos += float(cantidad)
-    
+def ver_resumen(): 
+    total_gastos = 0
+    total_ingresos = 0
+
+    if os.path.exists("gastos.txt"):
+        with open("gastos.txt", "r") as file:
+            for linea in file:
+                cantidad, _, _ = linea.strip().split(",")
+                total_gastos += float(cantidad)
+
+    if os.path.exists("ingresos.txt"):
+        with open("ingresos.txt","r") as file:
+            for linea in file:
+                cantidad, _, _ = linea.strip().split(",")
+                total_ingresos += float(cantidad)
+
     balance = total_ingresos - total_gastos    
     
     print ("--- Resumen del balance --- ")
@@ -76,4 +85,4 @@ def main():
             print("Opción no válida. Por favor, selecciona una opción válida.")
 
 if __name__ == "__main__":
-    main()
+    main() 
